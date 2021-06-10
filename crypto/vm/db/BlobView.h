@@ -18,6 +18,7 @@
 */
 #pragma once
 #include "td/utils/buffer.h"
+#include "td/utils/Status.h"
 
 namespace vm {
 class BlobView {

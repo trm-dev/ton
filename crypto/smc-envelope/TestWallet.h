@@ -26,9 +26,9 @@
 #include "vm/cells/CellString.h"
 
 namespace ton {
-class TestWallet : public ton::SmartContract, public WalletInterface {
+class TestWallet : public WalletInterface {
  public:
-  explicit TestWallet(State state) : ton::SmartContract(std::move(state)) {
+  explicit TestWallet(State state) : ton::WalletInterface(std::move(state)) {
   }
   explicit TestWallet(const td::Ed25519::PublicKey& public_key, td::uint32 seqno)
       : TestWallet(State{get_init_code(), get_data(public_key, seqno)}) {

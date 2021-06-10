@@ -64,7 +64,7 @@ td::Ref<vm::Cell> Wallet::make_a_gift_message(const td::Ed25519::PrivateKey& pri
 }
 
 td::Ref<vm::Cell> Wallet::get_init_code(td::int32 revision) noexcept {
-  return SmartContractCode::get_code(ton::SmartContractCode::WalletV2, revision);
+  return SmartContractCode::get_code(ton::SmartContractCode::WalletV3, revision);
 }
 
 vm::CellHash Wallet::get_init_code_hash() noexcept {

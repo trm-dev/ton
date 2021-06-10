@@ -22,11 +22,11 @@
 #include "block/block.h"
 #include "vm/cells/CellString.h"
 namespace ton {
-class TestGiver : public SmartContract, public WalletInterface {
+class TestGiver : public WalletInterface {
  public:
-  explicit TestGiver(State state) : ton::SmartContract(std::move(state)) {
+  explicit TestGiver(State state) : ton::WalletInterface(std::move(state)) {
   }
-  TestGiver() : ton::SmartContract({}) {
+  TestGiver() : ton::WalletInterface({}) {
   }
   static constexpr unsigned max_message_size = vm::CellString::max_bytes;
   static constexpr unsigned max_gifts_size = 1;
